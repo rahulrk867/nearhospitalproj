@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from NearHospServiceService WSDL service -->
+
+  <service name="NearHospService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://www.NearHospService.com"/>
+      <parameter name="wsdlServiceElement" value="NearHospServiceService"/>
+      <parameter name="schemaQualified" value="http://www.NearHospService.com"/>
+      <parameter name="wsdlServicePort" value="NearHospService"/>
+      <parameter name="className" value="com.NearHospService.www.NearHospService"/>
+      <parameter name="wsdlPortType" value="NearHospService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://www.NearHospService.com" xmlns:retNS="http://www.NearHospService.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="register" qname="operNS:register" returnQName="retNS:registerReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://www.NearHospService.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:data" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://www.NearHospService.com" xmlns:retNS="http://www.NearHospService.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getServices" qname="operNS:getServices" returnQName="retNS:getServicesReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://www.NearHospService.com" xmlns:retNS="http://www.NearHospService.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="login" qname="operNS:login" returnQName="retNS:loginReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://www.NearHospService.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:data" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://www.NearHospService.com" xmlns:retNS="http://www.NearHospService.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getDetails" qname="operNS:getDetails" returnQName="retNS:getDetailsReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://www.NearHospService.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:data" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://www.NearHospService.com" xmlns:retNS="http://www.NearHospService.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getHospital" qname="operNS:getHospital" returnQName="retNS:getHospitalReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://www.NearHospService.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:data" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://www.NearHospService.com" xmlns:retNS="http://www.NearHospService.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getDepartment" qname="operNS:getDepartment" returnQName="retNS:getDepartmentReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://www.NearHospService.com" xmlns:retNS="http://www.NearHospService.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getSymptoms" qname="operNS:getSymptoms" returnQName="retNS:getSymptomsReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://www.NearHospService.com" xmlns:retNS="http://www.NearHospService.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getDiseaseDetails" qname="operNS:getDiseaseDetails" returnQName="retNS:getDiseaseDetailsReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://www.NearHospService.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:diseaseId" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://www.NearHospService.com" xmlns:retNS="http://www.NearHospService.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getDiseases" qname="operNS:getDiseases" returnQName="retNS:getDiseasesReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://www.NearHospService.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:data" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="getHospital getSymptoms getDiseases getDepartment getDiseaseDetails getDetails getServices login register"/>
+
+  </service>
+</deployment>

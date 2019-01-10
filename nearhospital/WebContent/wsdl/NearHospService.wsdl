@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.NearHospService.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://www.NearHospService.com" xmlns:intf="http://www.NearHospService.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://www.NearHospService.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="register">
+    <complexType>
+     <sequence>
+      <element name="data" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="registerResponse">
+    <complexType>
+     <sequence>
+      <element name="registerReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getServices">
+    <complexType/>
+   </element>
+   <element name="getServicesResponse">
+    <complexType>
+     <sequence>
+      <element name="getServicesReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="login">
+    <complexType>
+     <sequence>
+      <element name="data" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="loginResponse">
+    <complexType>
+     <sequence>
+      <element name="loginReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDetails">
+    <complexType>
+     <sequence>
+      <element name="data" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDetailsResponse">
+    <complexType>
+     <sequence>
+      <element name="getDetailsReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHospital">
+    <complexType>
+     <sequence>
+      <element name="data" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHospitalResponse">
+    <complexType>
+     <sequence>
+      <element name="getHospitalReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDepartment">
+    <complexType/>
+   </element>
+   <element name="getDepartmentResponse">
+    <complexType>
+     <sequence>
+      <element name="getDepartmentReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSymptoms">
+    <complexType/>
+   </element>
+   <element name="getSymptomsResponse">
+    <complexType>
+     <sequence>
+      <element name="getSymptomsReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDiseaseDetails">
+    <complexType>
+     <sequence>
+      <element name="diseaseId" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDiseaseDetailsResponse">
+    <complexType>
+     <sequence>
+      <element name="getDiseaseDetailsReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDiseases">
+    <complexType>
+     <sequence>
+      <element name="data" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDiseasesResponse">
+    <complexType>
+     <sequence>
+      <element name="getDiseasesReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getServicesRequest">
+
+      <wsdl:part element="impl:getServices" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDepartmentRequest">
+
+      <wsdl:part element="impl:getDepartment" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="loginResponse">
+
+      <wsdl:part element="impl:loginResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHospitalResponse">
+
+      <wsdl:part element="impl:getHospitalResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="loginRequest">
+
+      <wsdl:part element="impl:login" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDiseaseDetailsRequest">
+
+      <wsdl:part element="impl:getDiseaseDetails" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServicesResponse">
+
+      <wsdl:part element="impl:getServicesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDiseaseDetailsResponse">
+
+      <wsdl:part element="impl:getDiseaseDetailsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDepartmentResponse">
+
+      <wsdl:part element="impl:getDepartmentResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDetailsRequest">
+
+      <wsdl:part element="impl:getDetails" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSymptomsRequest">
+
+      <wsdl:part element="impl:getSymptoms" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDetailsResponse">
+
+      <wsdl:part element="impl:getDetailsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHospitalRequest">
+
+      <wsdl:part element="impl:getHospital" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSymptomsResponse">
+
+      <wsdl:part element="impl:getSymptomsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="registerRequest">
+
+      <wsdl:part element="impl:register" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDiseasesRequest">
+
+      <wsdl:part element="impl:getDiseases" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDiseasesResponse">
+
+      <wsdl:part element="impl:getDiseasesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="registerResponse">
+
+      <wsdl:part element="impl:registerResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="NearHospService">
+
+      <wsdl:operation name="register">
+
+         <wsdl:input message="impl:registerRequest" name="registerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:registerResponse" name="registerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServices">
+
+         <wsdl:input message="impl:getServicesRequest" name="getServicesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getServicesResponse" name="getServicesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="login">
+
+         <wsdl:input message="impl:loginRequest" name="loginRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:loginResponse" name="loginResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDetails">
+
+         <wsdl:input message="impl:getDetailsRequest" name="getDetailsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getDetailsResponse" name="getDetailsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHospital">
+
+         <wsdl:input message="impl:getHospitalRequest" name="getHospitalRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getHospitalResponse" name="getHospitalResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDepartment">
+
+         <wsdl:input message="impl:getDepartmentRequest" name="getDepartmentRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getDepartmentResponse" name="getDepartmentResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSymptoms">
+
+         <wsdl:input message="impl:getSymptomsRequest" name="getSymptomsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getSymptomsResponse" name="getSymptomsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDiseaseDetails">
+
+         <wsdl:input message="impl:getDiseaseDetailsRequest" name="getDiseaseDetailsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getDiseaseDetailsResponse" name="getDiseaseDetailsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDiseases">
+
+         <wsdl:input message="impl:getDiseasesRequest" name="getDiseasesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getDiseasesResponse" name="getDiseasesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="NearHospServiceSoapBinding" type="impl:NearHospService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="register">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="registerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="registerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServices">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getServicesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getServicesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="login">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="loginRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="loginResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDetails">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDetailsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDetailsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHospital">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHospitalRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHospitalResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDepartment">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDepartmentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDepartmentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSymptoms">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSymptomsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSymptomsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDiseaseDetails">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDiseaseDetailsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDiseaseDetailsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDiseases">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDiseasesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDiseasesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="NearHospServiceService">
+
+      <wsdl:port binding="impl:NearHospServiceSoapBinding" name="NearHospService">
+
+         <wsdlsoap:address location="http://localhost:8080/nearHosp/services/NearHospService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
